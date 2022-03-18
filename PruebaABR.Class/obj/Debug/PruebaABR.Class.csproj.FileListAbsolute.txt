@@ -1,0 +1,6 @@
+C:\Users\MSI\source\repos\PruebaABR.API\PruebaABR.Class\bin\Debug\PruebaABR.Class.dll
+C:\Users\MSI\source\repos\PruebaABR.API\PruebaABR.Class\bin\Debug\PruebaABR.Class.pdb
+C:\Users\MSI\source\repos\PruebaABR.API\PruebaABR.Class\obj\Debug\PruebaABR.Class.csproj.AssemblyReference.cache
+C:\Users\MSI\source\repos\PruebaABR.API\PruebaABR.Class\obj\Debug\PruebaABR.Class.csproj.CoreCompileInputs.cache
+C:\Users\MSI\source\repos\PruebaABR.API\PruebaABR.Class\obj\Debug\PruebaABR.Class.dll
+C:\Users\MSI\source\repos\PruebaABR.API\PruebaABR.Class\obj\Debug\PruebaABR.Class.pdb

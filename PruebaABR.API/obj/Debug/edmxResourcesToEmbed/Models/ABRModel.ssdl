@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PruebaABRModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Asignatura">
+    <Key>
+      <PropertyRef Name="AsignaturaID" />
+    </Key>
+    <Property Name="AsignaturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Codigo" Type="varchar" MaxLength="100" />
+    <Property Name="Nombre" Type="varchar(max)" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Configuracion">
+    <Key>
+      <PropertyRef Name="ConfiguracionID" />
+    </Key>
+    <Property Name="ConfiguracionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="varchar" MaxLength="100" />
+    <Property Name="Valor" Type="varchar(max)" />
+    <Property Name="Descripcion" Type="varchar(max)" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="EstudianteAsignatura">
+    <Key>
+      <PropertyRef Name="EstudianteAsignaturaID" />
+    </Key>
+    <Property Name="EstudianteAsignaturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonaID" Type="int" />
+    <Property Name="AsignaturaID" Type="int" />
+    <Property Name="NotaFinal" Type="decimal" Precision="2" Scale="1" />
+    <Property Name="FechaAsignacion" Type="datetime" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Persona">
+    <Key>
+      <PropertyRef Name="PersonaID" />
+    </Key>
+    <Property Name="PersonaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Identificacion" Type="varchar" MaxLength="100" />
+    <Property Name="Nombre" Type="varchar(max)" />
+    <Property Name="Apellido" Type="varchar(max)" />
+    <Property Name="Edad" Type="int" />
+    <Property Name="Direccion" Type="varchar(max)" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="RolID" Type="int" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="ProfesorAsignatura">
+    <Key>
+      <PropertyRef Name="ProfesorAsignaturaID" />
+    </Key>
+    <Property Name="ProfesorAsignaturaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonaID" Type="int" />
+    <Property Name="AsignaturaID" Type="int" />
+    <Property Name="FechaAsignacion" Type="datetime" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="RolID" />
+    </Key>
+    <Property Name="RolID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar(max)" />
+    <Property Name="Activo" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="PruebaABRModelStoreContainer">
+    <EntitySet Name="Asignatura" EntityType="Self.Asignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Configuracion" EntityType="Self.Configuracion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstudianteAsignatura" EntityType="Self.EstudianteAsignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persona" EntityType="Self.Persona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProfesorAsignatura" EntityType="Self.ProfesorAsignatura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
